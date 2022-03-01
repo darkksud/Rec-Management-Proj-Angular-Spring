@@ -1,0 +1,107 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Login</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data position-absolute text-center">
+      Welcome to Recruitment Managment
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      <img #img src="assets/images/soprasteria.png" alt="Logo">
+      <body class="image">
+        <div class="container col-lg-6">
+          <h1 class="text-center">Login</h1>
+          <div class="card">
+            <div class="card-body">
+              <form class="form-group">
+                <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+                <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+                <div class="form-group">
+                  <label for="email">User Name :</label>
+                  <input type="text" class="form-control" id="username" [(ngModel)]="username" placeholder="Enter User Name"
+                    name="username">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Password:</label>
+                  <input type="password" class="form-control" [(ngModel)]="password" id="password" placeholder="Enter password"
+                    name="password">
+                </div>
+                <br>
+                <button (click)=handleLogin() class="btn btn-success">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+          <!-- <i class="pi pi-sign-in" style="font-size: 3em"></i>
+        <div class="row">
+          <div class="col-xs-12 col-md-6 col-md-offset-3">
+            
+            <span class="toolbar-spacer"></span>
+          <img #img src="assets/images/soprasteria.png" alt="Logo">
+      
+            <div class="form-group" style="padding-bottom: 10px;">
+                
+                  <div class="ui-g-12 ui-md-10">
+                <span class="ui-float-label">
+                  <label for="username">Username</label>
+                <input
+                  type="text"
+                  id="username"
+                  class="form-control"
+                  ngModel
+                  name="username"
+                  required
+                  pInputText
+                  pTooltip="Enter your ad-one/Emaad username" tooltipPosition="right"
+                />
+                
+              </span>
+                 
+                  </div>
+              </div>
+              <div class="form-group">
+                <div class="ui-g ui-fluid" style="padding-bottom: 10px;">
+                  <div class="ui-g-12 ui-md-10">
+                <span class="ui-float-label">
+                  <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  ngModel
+                  name="password"
+                  required
+                  pTooltip="Enter your ad-one/Emaad password" tooltipPosition="right"
+                  pInputText
+                  [style]="{font: 'calibri'}"
+                />
+               
+                </span>
+                  </div>
+                  </div>
+              </div>
+              <div class="ui-g ui-fluid" style="padding-bottom: 10px;">
+                <div class="ui-g-12 ui-md-10">
+                <button
+                  class="ui-button-info"
+                  type="submit"
+                  id="login"
+                  pButton
+                  label="SIGN IN"
+                >SIGN IN
+                
+
+                </button>
+                </div>
+      
+              </div>
+            
+          </div>
+        </div>
+        
+       -->
+       
+        </body>
+
+                
+    </div>
+  </div>
+</div>

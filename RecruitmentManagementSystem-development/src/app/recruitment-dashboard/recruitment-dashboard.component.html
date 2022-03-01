@@ -1,0 +1,121 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">Recruitment-Dashboard</div>
+    <div class="page__content shadow p-3 position-relative">
+      <div class="page__content-data position-absolute text-center">
+        
+        <div class="example-header">
+          
+        </div>
+        
+        <div class="example-container mat-elevation-z8">
+        
+          <mat-table [dataSource]="dataSource" matSort>
+        
+            <!-- S. No Column -->
+            <ng-container matColumnDef="sNo">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> S. No </mat-header-cell>
+              <mat-cell *matCellDef="let row"> {{row.sNo}} </mat-cell>
+            </ng-container>
+        
+            <!-- Phone Column -->
+            <ng-container matColumnDef="phone">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Candidate Phone # </mat-header-cell>
+              <mat-cell *matCellDef="let row"> {{row.phone}} </mat-cell>
+            </ng-container>
+        
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Candidate Name </mat-header-cell>
+              <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+            </ng-container>
+        
+            <!-- Email Column -->
+            <ng-container matColumnDef="email">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Candidate Email ID </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.email}} </mat-cell>
+            </ng-container>
+
+            <!-- Skills Column -->
+            <ng-container matColumnDef="skills">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Skills </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.skills"> {{row.skills}} </mat-cell>
+            </ng-container>
+
+            <!-- Project Column -->
+            <ng-container matColumnDef="project">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Project </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.project"> {{row.project}} </mat-cell>
+            </ng-container>
+
+            <!-- Profile Column -->
+            <ng-container matColumnDef="profile">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Profile Shared Y/N </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.profile"> {{row.profile}} </mat-cell>
+            </ng-container>
+
+            <!-- Availability Date Column -->
+            <ng-container matColumnDef="availabilityDate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Candidate Availability Date for Interview </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.availabilityDate"> {{row.availabilityDate}} </mat-cell>
+            </ng-container>
+
+            <!-- Notice Period Column -->
+            <ng-container matColumnDef="noticePeriod">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Notice Period </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.noticePeriod"> {{row.noticePeriod}} </mat-cell>
+            </ng-container>
+
+            <!-- Interview Date Column -->
+            <ng-container matColumnDef="interviewDate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Interview Date </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.interviewDate"> {{row.interviewDate}} </mat-cell>
+            </ng-container>
+
+            <!-- Panel Column -->
+            <ng-container matColumnDef="panel">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Panel </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.panel"> {{row.panel}} </mat-cell>
+            </ng-container>
+
+            <!-- Feedback Column -->
+            <ng-container matColumnDef="feedback">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Feedback Shared to TA on dtd </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.feedback"> {{row.feedback}} </mat-cell>
+            </ng-container>
+
+            <!-- Offer Release Date Column -->
+            <ng-container matColumnDef="offerRLDate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Offer Release Date </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.offerRLDate"> {{row.offerRLDate}} </mat-cell>
+            </ng-container>
+
+            <!-- Joining Date Column -->
+            <ng-container matColumnDef="joiningDate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Joining Date </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.joiningDate"> {{row.joiningDate}} </mat-cell>
+            </ng-container>
+
+            <!-- Resignation Letter Shared date Column -->
+            <ng-container matColumnDef="resignationDate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Resignation Letter Shared date </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.resignationDate"> {{row.resignationDate}} </mat-cell>
+            </ng-container>
+
+            <!-- Status Column -->
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+              <mat-cell *matCellDef="let row" [style.color]="row.status"> {{row.status}} </mat-cell>
+            </ng-container>
+
+                        
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;">
+            </mat-row>
+          </mat-table>
+        
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+  

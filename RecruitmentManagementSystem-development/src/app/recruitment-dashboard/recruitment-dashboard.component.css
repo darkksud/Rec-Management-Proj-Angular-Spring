@@ -1,0 +1,46 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+  }
+  
+  .example-header {
+    min-height: 64px;
+    padding: 8px 24px 0;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+
+.page {
+    color: white;
+    padding: 0 1rem;
+    background: #f1f5f9;
+}
+.page__box {
+    min-height: 120px;
+    background: #ac2239;
+    margin: 0 -1rem;
+    font-size: 36px;
+}
+.page__content {
+    min-height: calc(100vh - 178px);
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: white;
+    color: black;
+    font-size: 9px;
+}
+.mat-header-cell{
+  font-weight: 900;
+}
+h3{
+  color:blue;
+}
