@@ -1,10 +1,60 @@
 <div class="container-fluid page">
-    <div class="d-flex page__box p-3 mt-2">Manager-Dashboard</div>
-    <div class="page__content shadow p-3 position-relative">
-      <div class="page__content-data position-absolute text-center">
-        Manager Dashboard Content Goes Here
-      </div>
+  <div class="d-flex page__box p-3 mt-2">Dashboard</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data position-absolute text-center">
+      <h1>Skills</h1>
+    <div class="example-header">
+        
+    </div>  
+    <div class="example-container mat-elevation-z8">
+      
+      <mat-table [dataSource]="dataSource" matSort>
+      
+        <ng-container matColumnDef="A">
+          <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.A}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="BCD">
+          <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.BCD}} </mat-cell>
+        </ng-container>
+
+        <!-- S. No Column -->
+       <ng-container matColumnDef="sNo">
+          <mat-header-cell *matHeaderCellDef mat-sort-header>Manual Testing</mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.sNo}} </mat-cell>
+          
+        </ng-container>
+   <!-- Phone Column -->
+   <ng-container matColumnDef="phone">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Automation Testing </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.phone}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> PHP </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Email Column -->
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> SAC </mat-header-cell>
+    <mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.email}} </mat-cell>
+  </ng-container>
+
+
+                 
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;">
+        </mat-row>
+    </mat-table> 
+    
+      
+    </div>
+
+
     </div>
   </div>
-  <router-outlet></router-outlet>
-  
+</div>
