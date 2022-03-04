@@ -10,7 +10,7 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./manager-dashboard.component.css']
 })
 export class ManagerDashboardComponent {
-  displayedColumns = ['A','BCD','sNo', 'name', 'phone', 'email'];
+  displayedColumns = ['project_name','automation_testing','manual_testing', 'php', 'sac'];
   rowData=['total','score'];
 
 

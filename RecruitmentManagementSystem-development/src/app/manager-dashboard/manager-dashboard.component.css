@@ -16,10 +16,12 @@
     background: white;
     color: black;
     font-size: 2rem;
+ 
 }
 .page__content-data {
     top: 50%;
-    left: 50%;
+    left: 40%;
+    right:10%;
     transform: translate(-50%, -50%);
 }
 .example-container {
@@ -46,6 +48,8 @@
   .mat-header-cell {
      font-size: 24px;
      
-     border-right-style: solid;
-     display: inline-table;
+     
+  }
+  h1{
+    color:blue;
   }
