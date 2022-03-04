@@ -24,10 +24,11 @@ public class ManagerDashBoardDaoImpl implements ManagerDashBoardDao {
 			@Override
 			public ManagerDashBoard mapRow(ResultSet rs, int rowNum) throws SQLException {
 				final ManagerDashBoard recTableData = new ManagerDashBoard();
-				recTableData.setAutomationTesting(rs.getString("automation_testing"));
-				recTableData.setManualTesting(rs.getString("manual_testing"));
-				recTableData.setPhp(rs.getString("php"));
-				recTableData.setSac(rs.getString("sac"));
+				recTableData.setProjectName(rs.getString("project_name"));
+				recTableData.setAutomationTesting(rs.getInt("automation_testing"));
+				recTableData.setManualTesting(rs.getInt("manual_testing"));
+				recTableData.setPhp(rs.getInt("php"));
+				recTableData.setSac(rs.getInt("sac"));
 				
 				return recTableData;
 			}
