@@ -9,36 +9,30 @@
       <div class="example-container mat-elevation-z8">
         
         <mat-table [dataSource]="dataSource" matSort>
-        
-          <ng-container matColumnDef="A">
-            <mat-header-cell *matHeaderCellDef mat-sort-header></mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.A}} </mat-cell>
-          </ng-container>
-
+        <!-- PROJECT NAME Column -->
           <ng-container matColumnDef="project_name">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Project Name</mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.project_name}} </mat-cell>
           </ng-container>
 
-          <!-- S. No Column -->
+          <!-- AUTOMATION Column -->
          <ng-container matColumnDef="automation_testing">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Automation </mat-header-cell>
             <mat-cell *matCellDef="let row"> {{row.automation_testing}} </mat-cell>
-            
-          </ng-container>
-     <!-- Phone Column -->
+         </ng-container>
+     <!--TESTING Column -->
      <ng-container matColumnDef="manual_testing">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>Testing </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef mat-sort-header>MANUAL </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.manual_testing}} </mat-cell>
     </ng-container>
 
-    <!-- Name Column -->
+    <!-- PHP Column -->
     <ng-container matColumnDef="php">
       <mat-header-cell *matHeaderCellDef mat-sort-header> PHP </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.php}} </mat-cell>
     </ng-container>
 
-    <!-- Email Column -->
+    <!-- SAC Column -->
     <ng-container matColumnDef="sac">
       <mat-header-cell *matHeaderCellDef mat-sort-header>SAC </mat-header-cell>
       <mat-cell *matCellDef="let row" > {{row.sac}} </mat-cell>

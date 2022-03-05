@@ -1,8 +1,11 @@
-//import { Component, OnInit } from '@angular/core';
 import {Component, ViewChild} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { environment } from 'src/environments/environment';
+import {HttpClient} from '@angular/common/http';
+
+
 
 @Component({
   selector: 'app-manager-dashboard',
@@ -11,8 +14,6 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class ManagerDashboardComponent {
   displayedColumns = ['project_name','automation_testing','manual_testing', 'php', 'sac'];
-  rowData=['total','score'];
-
 
   dataSource: MatTableDataSource<UserData>;
 
@@ -30,46 +31,39 @@ export class ManagerDashboardComponent {
 
    }
 
-  constructor() {
-    // Create 100 users
-    const users: UserData[] = [];
-    for (let i = 1; i <= 10; i++) { users.push(createNewUser(i)); }
-
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+   constructor(private http : HttpClient){
+    
   }
 
-}
-  function createNewUser(sNo: number): UserData {
-    const name =
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-        NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '';
-  
-    return {
-      sNo: sNo.toString(),
-      name: name,
-      phone:  Math.round(Math.random() * 100).toString(),
-      email: EMAILS[Math.round(Math.random() * (EMAILS.length - 1))],
-     
+  li:any;
+  lis=[];
+  path = environment.backGroundUrl + "api/managerDashBoard/getAll";
+  ngOnInit(): void {
     
-    };
+    this.http.get(this.path)
+    .subscribe(Response => {
+      
+     
+      this.li=Response;
+      const users: UserData[] = this.li;
+    this.dataSource = new MatTableDataSource(users);
+    this.ngAfterViewInit();
+    this.applyFilter("");
+    });
+    
 
 }
 
 
-/** Constants used to fill up our data base. */
-const NAMES = ['1', '2', '', '3', '7', '3',
-  '', '4', '', '', '', '',
-  '', '', '', '4', '7', '2', '0'];
-const SKILLS = [''];
-const PROJECTS = [''];
-const EMAILS = ['3'];
+
+
 
 
 export interface UserData {
-  sNo: string;
-  name: string;
-  phone: string;
-  email: string;
-
+  
+  project_name: string;
+  automation_testing: number;
+  manual_testing: number;
+  php: number;
+  sac:number;
 }
