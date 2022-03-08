@@ -10,20 +10,20 @@
         
         <mat-table [dataSource]="dataSource" matSort>
         <!-- PROJECT NAME Column -->
-          <ng-container matColumnDef="project_name">
+          <ng-container matColumnDef="projectName">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Project Name</mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.project_name}} </mat-cell>
+            <mat-cell *matCellDef="let row"> {{row.projectName}} </mat-cell>
           </ng-container>
 
           <!-- AUTOMATION Column -->
-         <ng-container matColumnDef="automation_testing">
+         <ng-container matColumnDef="automationTesting">
             <mat-header-cell *matHeaderCellDef mat-sort-header>Automation </mat-header-cell>
-            <mat-cell *matCellDef="let row"> {{row.automation_testing}} </mat-cell>
+            <mat-cell *matCellDef="let row"> {{row.automationTesting}} </mat-cell>
          </ng-container>
      <!--TESTING Column -->
-     <ng-container matColumnDef="manual_testing">
+     <ng-container matColumnDef="manualTesting">
       <mat-header-cell *matHeaderCellDef mat-sort-header>MANUAL </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.manual_testing}} </mat-cell>
+      <mat-cell *matCellDef="let row"> {{row.manualTesting}} </mat-cell>
     </ng-container>
 
     <!-- PHP Column -->

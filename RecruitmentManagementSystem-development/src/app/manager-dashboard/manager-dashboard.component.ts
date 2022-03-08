@@ -13,7 +13,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./manager-dashboard.component.css']
 })
 export class ManagerDashboardComponent {
-  displayedColumns = ['project_name','automation_testing','manual_testing', 'php', 'sac'];
+  displayedColumns = ['projectName','automationTesting','manualTesting', 'php', 'sac'];
 
   dataSource: MatTableDataSource<UserData>;
 
@@ -48,10 +48,10 @@ export class ManagerDashboardComponent {
       const users: UserData[] = this.li;
     this.dataSource = new MatTableDataSource(users);
     this.ngAfterViewInit();
-    this.applyFilter("");
+    
     });
     
-
+  }
 }
 
 
@@ -61,9 +61,9 @@ export class ManagerDashboardComponent {
 
 export interface UserData {
   
-  project_name: string;
-  automation_testing: number;
-  manual_testing: number;
+  projectName: string;
+  automationTesting: number;
+  manualTesting: number;
   php: number;
   sac:number;
 }
