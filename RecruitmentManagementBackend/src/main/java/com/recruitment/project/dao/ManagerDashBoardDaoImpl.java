@@ -29,11 +29,17 @@ public class ManagerDashBoardDaoImpl implements ManagerDashBoardDao {
 				recTableData.setManualTesting(rs.getInt("manual_testing"));
 				recTableData.setPhp(rs.getInt("php"));
 				recTableData.setSac(rs.getInt("sac"));
-				
+				recTableData.setBa(rs.getInt("ba"));
+				recTableData.setScrum(rs.getInt("scrum"));
+				recTableData.setCicd(rs.getInt("cicd"));
+				recTableData.setUnix(rs.getInt("unix"));
+				recTableData.setKafka(rs.getInt("kafka"));
 				return recTableData;
 			}
 		});
 	}
 
 }
+
+
 

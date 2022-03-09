@@ -7,6 +7,46 @@ public class ManagerDashBoard {
 	private int automationTesting;
 	private int php;
 	private int sac;
+	private int ba;
+	private int scrum;
+	private int cicd;
+	private int unix;
+	private int kafka;
+
+
+
+	
+	public int getBa() {
+		return ba;
+	}
+	public void setBa(int ba) {
+		this.ba = ba;
+	}
+	public int getScrum() {
+		return scrum;
+	}
+	public void setScrum(int scrum) {
+		this.scrum = scrum;
+	}
+	public int getCicd() {
+		return cicd;
+	}
+	public void setCicd(int cicd) {
+		this.cicd = cicd;
+	}
+	
+	public int getUnix() {
+		return unix;
+	}
+	public void setUnix(int unix) {
+		this.unix = unix;
+	}
+	public int getKafka() {
+		return kafka;
+	}
+	public void setKafka(int kafka) {
+		this.kafka = kafka;
+	}
 	public String getProjectName() {
 		return projectName;
 	}

@@ -37,7 +37,57 @@
       <mat-header-cell *matHeaderCellDef mat-sort-header>SAC </mat-header-cell>
       <mat-cell *matCellDef="let row" > {{row.sac}} </mat-cell>
     </ng-container>
+	
+	 <!-- BA Column -->
 
+    <ng-container matColumnDef="ba">
+
+      <mat-header-cell *matHeaderCellDef mat-sort-header>BA </mat-header-cell>
+
+      <mat-cell *matCellDef="let row" > {{row.ba}} </mat-cell>
+
+    </ng-container>
+
+    <!-- SCRUM Column -->
+
+    <ng-container matColumnDef="scrum">
+
+      <mat-header-cell *matHeaderCellDef mat-sort-header>SCRUM </mat-header-cell>
+
+      <mat-cell *matCellDef="let row" > {{row.scrum}} </mat-cell>
+
+    </ng-container>
+
+    <!-- CICD Column -->
+
+    <ng-container matColumnDef="ccid">
+
+      <mat-header-cell *matHeaderCellDef mat-sort-header>CICD </mat-header-cell>
+
+      <mat-cell *matCellDef="let row" > {{row.cicd}} </mat-cell>
+
+    </ng-container>
+   
+
+    <!-- UNIX Column -->
+
+    <ng-container matColumnDef="unix">
+
+      <mat-header-cell *matHeaderCellDef mat-sort-header>UNIX </mat-header-cell>
+
+      <mat-cell *matCellDef="let row" > {{row.sac}} </mat-cell>
+
+    </ng-container>
+
+    <!-- KAFKA Column -->
+
+    <ng-container matColumnDef="kafka">
+
+      <mat-header-cell *matHeaderCellDef mat-sort-header>KAFKA </mat-header-cell>
+
+      <mat-cell *matCellDef="let row" > {{row.kafka}} </mat-cell>
+
+    </ng-container>
 
                    
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
