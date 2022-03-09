@@ -27,7 +27,7 @@ public class RecruitmentDashBoardDaoImpl implements RecruitmentDashBoardDao {
 				recTableData.setName(rs.getString("candidate_name"));
 				recTableData.setEmail(rs.getString("candidate_email"));
 				recTableData.setPhone(rs.getString("candidate_phone"));
-				recTableData.setProject("");
+				recTableData.setProject(rs.getString("project_name"));
 				recTableData.setAvailabilityDate(rs.getString("candidate_avail_datetime"));
 				recTableData.setFeedback(rs.getString("feedback_shared_TA_DTD"));
 				recTableData.setInterviewDate("");
