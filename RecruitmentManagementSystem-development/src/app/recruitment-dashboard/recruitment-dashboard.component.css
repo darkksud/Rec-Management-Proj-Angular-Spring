@@ -1,11 +1,13 @@
 .example-container {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
+    min-width: 960px;
+    max-width: 960px; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%; 
   }
   
   .example-header {
-    min-height: 64px;
+    min-height: 30px;
     padding: 8px 24px 0;
   }
   
@@ -14,10 +16,10 @@
     width: 100%;
   }
   
-  .mat-table {
+  /* .mat-table {
     overflow: auto;
     max-height: 500px;
-  }
+  } */
 
 .page {
     color: white;
@@ -44,3 +46,26 @@
 h3{
   color:blue;
 }
+.mat-table {
+  overflow: auto;
+  max-height: 350px;
+  /* max-width: 100%; */
+  
+}
+
+.mat-cell,
+.mat-header-cell {
+word-wrap: initial;
+display: table-cell;
+padding: 0px 10px;
+line-break: unset;
+width: 100%;
+white-space: nowrap;
+overflow: hidden;
+vertical-align: middle;
+}
+.mat-row,
+.mat-header-row {
+display: table-row;
+}
+
