@@ -75,3 +75,7 @@ vertical-align: middle;
 display: table-row;
 }
 
+.page__content-data{
+  padding-left: 1%;
+  padding-right: 1%;
+}
