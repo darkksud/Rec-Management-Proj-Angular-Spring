@@ -29,3 +29,8 @@ mat-toolbar {
 ::ng-deep .mat-menu-content {
     width: 160px;
 }
+.format{
+    float: right;
+    position: fixed;
+    right: 10px;
+}

@@ -7,6 +7,7 @@ import { ManagerDashboardComponent } from './manager-dashboard/manager-dashboard
 import { RecruitmentDashboardComponent } from './recruitment-dashboard/recruitment-dashboard.component';
 
 import { LoginComponent } from './login/login.component';
+import { RedirectComponent } from './redirect/redirect.component';
 
  
 
@@ -18,7 +19,9 @@ const routes: Routes = [
 
   {path: 'manager-dashboard', component:ManagerDashboardComponent},
 
-  {path: 'login', component:LoginComponent}
+  {path: 'login', component:LoginComponent},
+   {path: 'redirect', component:RedirectComponent}
+
 
 ];
 

@@ -27,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 
 import { FormsModule } from '@angular/forms';
+import { RedirectComponent } from './redirect/redirect.component';
 //import { LogoutComponent } from './logout/logout.component';
 //import { HttpInterceptorService } from './httpInterceptor.service';
 
@@ -39,6 +40,7 @@ import { FormsModule } from '@angular/forms';
     RecruitmentDashboardComponent,
     ManagerDashboardComponent,
     LoginComponent,
+    RedirectComponent,
   ],
   imports: [
     BrowserModule,
