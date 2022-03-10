@@ -13,6 +13,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./manager-dashboard.component.css']
 })
 export class ManagerDashboardComponent {
+
    displayedColumns = ['projectName','automationTesting','manualTesting', 'php', 'sac','ba','scrum','cicd','unix','kafka'];
 
   dataSource: MatTableDataSource<UserData>;
@@ -61,7 +62,6 @@ export class ManagerDashboardComponent {
 
 export interface UserData {
 
- 
 
   projectName: string;
 

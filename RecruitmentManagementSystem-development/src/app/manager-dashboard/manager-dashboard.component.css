@@ -1,5 +1,5 @@
 .example-container {
-  min-width: 400px;
+  min-width: 700px;
   max-width: 960px; 
   margin-left: auto;
   margin-right: auto;
@@ -72,5 +72,5 @@ vertical-align: middle;
 display: table-row;
 }
 .page__content-data{
-  padding-left: 30%;
+  padding-left: 15%;
 }
