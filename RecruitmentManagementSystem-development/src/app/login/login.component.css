@@ -1,14 +1,17 @@
 .page {
   color: white;
-  padding: 0 1rem;
-  background: #f1f5f9;
+  padding: 8rem 5rem;
+  background-image: url("../image/bg.png");
+background-repeat: no-repeat; /* Do not repeat the image */
+background-size: cover;
+height:80%;
 }
-.page__box {
+/* .page__box {
   min-height: 120px;
   background: #ac2239;
   margin: 0 -1rem;
   font-size: 36px;
-}
+} */
 .page__content {
   min-height: calc(100vh - 178px);
   border-radius: 10px;
