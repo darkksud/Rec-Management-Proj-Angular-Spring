@@ -8,7 +8,9 @@
     flex-direction: column;
     min-width: 300px;
   }
-  
+  .maxed{
+    margin-left: 250px;
+  }
   .example-header {
     min-height: 30px;
     padding: 8px 24px 0;

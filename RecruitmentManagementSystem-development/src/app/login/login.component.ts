@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     if(this.username === this.inputUserName && this.password === this.inputPassword){
       this.loginSuccess = true;
       this.successMessage = 'Login Successful.';
-      this.router.navigate(['/recruitment-dashboard']);
+      this.router.navigate(['/manager-dashboard']);
     }
     else{
       this.invalidLogin = true;

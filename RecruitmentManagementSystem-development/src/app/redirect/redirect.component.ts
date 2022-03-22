@@ -16,6 +16,13 @@ export class RedirectComponent implements OnInit {
 
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
+    document.querySelectorAll<HTMLElement>('.example-container').forEach((ele) => {
+      if (this.sideBarOpen) {
+        ele.classList.add("maxed");
+      } else {
+        ele.classList.remove("maxed");
+      }
+      });
   }
 
 }

@@ -1,8 +1,8 @@
 .example-container {
   display: flex;
     flex-direction: column;
-
-  min-width: 700px;
+    min-width: 300px;
+    margin-left: 280px;
   /* max-width: 960px; 
   margin-left: auto;
   margin-right: auto;
